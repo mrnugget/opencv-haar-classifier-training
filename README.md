@@ -2,10 +2,12 @@
 
 ## Instructions
 
-1. Get OpenCV
+1. Install OpenCV & get OpenCV source
 
         brew tap homebrew/science
         brew install --with-tbb opencv
+        wget http://downloads.sourceforge.net/project/opencvlibrary/opencv-unix/2.4.5/opencv-2.4.5.tar.gz
+        tar xvzf opencv-2.4.5.tar.gz
 
 2. Clone this repository
 
@@ -29,8 +31,8 @@ to the `./samples` folder:
 
 6. Compile the `mergevec.cpp` file in the `./src` directory:
 
-        cp src/mergevec.cpp ~/opencv-2.4.6/apps/haartraining
-        cd ~/opencv-2.4.6/apps/haartraining
+        cp src/mergevec.cpp ~/opencv-2.4.5/apps/haartraining
+        cd ~/opencv-2.4.5/apps/haartraining
         g++ `pkg-config --libs --cflags opencv` -I. -o mergevec mergevec.cpp\
           cvboost.cpp cvcommon.cpp cvsamples.cpp cvhaarclassifier.cpp\
           cvhaartraining.cpp
