@@ -1,5 +1,9 @@
 # Train your own OpenCV Haar classifier
 
+This repository aims to provide tools and information on training your own
+OpenCV Haar classifier.  Use itin conjunction with this blog post: [Train your own OpenCV Haar
+classifier](http://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classifier.html).
+
 ## Instructions
 
 1. Install OpenCV & get OpenCV source
