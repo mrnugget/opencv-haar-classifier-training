@@ -10,8 +10,8 @@ classifier](http://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classif
 
         brew tap homebrew/science
         brew install --with-tbb opencv
-        wget http://downloads.sourceforge.net/project/opencvlibrary/opencv-unix/2.4.5/opencv-2.4.5.tar.gz
-        tar xvzf opencv-2.4.5.tar.gz
+        wget http://downloads.sourceforge.net/project/opencvlibrary/opencv-unix/2.4.9/opencv-2.4.9.zip
+        unzip opencv-2.4.9.zip
 
 2. Clone this repository
 
@@ -37,7 +37,8 @@ to the `./samples` folder:
 
         cp src/mergevec.cpp ~/opencv-2.4.5/apps/haartraining
         cd ~/opencv-2.4.5/apps/haartraining
-        g++ `pkg-config --libs --cflags opencv` -I. -o mergevec mergevec.cpp\
+        g++ `pkg-config --libs --cflags opencv | sed 's/libtbb\.dylib/tbb/'`\
+          -I. -o mergevec mergevec.cpp\
           cvboost.cpp cvcommon.cpp cvsamples.cpp cvhaarclassifier.cpp\
           cvhaartraining.cpp\
           -lopencv_core -lopencv_calib3d -lopencv_imgproc -lopencv_highgui -lopencv_objdetect
