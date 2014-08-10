@@ -35,8 +35,8 @@ to the `./samples` folder:
 
 6. Compile the `mergevec.cpp` file in the `./src` directory:
 
-        cp src/mergevec.cpp ~/opencv-2.4.5/apps/haartraining
-        cd ~/opencv-2.4.5/apps/haartraining
+        cp src/mergevec.cpp ~/opencv-2.4.9/apps/haartraining
+        cd ~/opencv-2.4.9/apps/haartraining
         g++ `pkg-config --libs --cflags opencv | sed 's/libtbb\.dylib/tbb/'`\
           -I. -o mergevec mergevec.cpp\
           cvboost.cpp cvcommon.cpp cvsamples.cpp cvhaarclassifier.cpp\
@@ -62,7 +62,7 @@ days probably, depending on the computer you have and how big your images are).
 
 10. Use your finished classifier!
 
-        cd ~/opencv-2.4.5/samples/c
+        cd ~/opencv-2.4.9/samples/c
         chmod +x build_all.sh
         ./build_all.sh
         ./facedetect --cascade="~/finished_classifier.xml"
