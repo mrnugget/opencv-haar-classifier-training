@@ -37,21 +37,9 @@ to the `./samples` folder:
           "opencv_createsamples -bgcolor 0 -bgthresh 0 -maxxangle 1.1\
           -maxyangle 1.1 maxzangle 0.5 -maxidev 40 -w 80 -h 40"
 
-6. Compile the `mergevec.cpp` file in the `./src` directory:
+6. Use `tools/mergevec.py` to merge the samples in `./samples` into one file:
 
-        cp src/mergevec.cpp ~/opencv-2.4.9/apps/haartraining
-        cd ~/opencv-2.4.9/apps/haartraining
-        g++ `pkg-config --libs --cflags opencv | sed 's/libtbb\.dylib/tbb/'`\
-          -I. -o mergevec mergevec.cpp\
-          cvboost.cpp cvcommon.cpp cvsamples.cpp cvhaarclassifier.cpp\
-          cvhaartraining.cpp\
-          -lopencv_core -lopencv_calib3d -lopencv_imgproc -lopencv_highgui -lopencv_objdetect
-
-7. Use the compiled executable `mergevec` to merge the samples in `./samples`
-into one file:
-
-        find ./samples -name '*.vec' > samples.txt
-        ./mergevec samples.txt samples.vec
+        ./tools/mergevec.py -v samples/ -o samples.vec
 
 8. Start training the classifier with `opencv_traincascade`, which comes with
 OpenCV, and save the results to `./classifier`:
