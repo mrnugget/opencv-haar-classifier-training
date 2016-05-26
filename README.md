@@ -41,7 +41,7 @@ to the `./samples` folder:
 
         ./tools/mergevec.py -v samples/ -o samples.vec
 
-8. Start training the classifier with `opencv_traincascade`, which comes with
+7. Start training the classifier with `opencv_traincascade`, which comes with
 OpenCV, and save the results to `./classifier`:
 
         opencv_traincascade -data classifier -vec samples.vec -bg negatives.txt\
@@ -49,10 +49,10 @@ OpenCV, and save the results to `./classifier`:
           -numNeg 600 -w 80 -h 40 -mode ALL -precalcValBufSize 1024\
           -precalcIdxBufSize 1024
 
-9. Wait until the process is finished (which takes a long time — a couple of
+8. Wait until the process is finished (which takes a long time — a couple of
 days probably, depending on the computer you have and how big your images are).
 
-10. Use your finished classifier!
+9. Use your finished classifier!
 
         cd ~/opencv-2.4.9/samples/c
         chmod +x build_all.sh
