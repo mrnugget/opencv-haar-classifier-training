@@ -37,23 +37,11 @@ to the `./samples` folder:
           "opencv_createsamples -bgcolor 0 -bgthresh 0 -maxxangle 1.1\
           -maxyangle 1.1 maxzangle 0.5 -maxidev 40 -w 80 -h 40"
 
-6. Compile the `mergevec.cpp` file in the `./src` directory:
+6. Use `tools/mergevec.py` to merge the samples in `./samples` into one file:
 
-        cp src/mergevec.cpp ~/opencv-2.4.9/apps/haartraining
-        cd ~/opencv-2.4.9/apps/haartraining
-        g++ `pkg-config --libs --cflags opencv | sed 's/libtbb\.dylib/tbb/'`\
-          -I. -o mergevec mergevec.cpp\
-          cvboost.cpp cvcommon.cpp cvsamples.cpp cvhaarclassifier.cpp\
-          cvhaartraining.cpp\
-          -lopencv_core -lopencv_calib3d -lopencv_imgproc -lopencv_highgui -lopencv_objdetect
+        ./tools/mergevec.py -v samples/ -o samples.vec
 
-7. Use the compiled executable `mergevec` to merge the samples in `./samples`
-into one file:
-
-        find ./samples -name '*.vec' > samples.txt
-        ./mergevec samples.txt samples.vec
-
-8. Start training the classifier with `opencv_traincascade`, which comes with
+7. Start training the classifier with `opencv_traincascade`, which comes with
 OpenCV, and save the results to `./classifier`:
 
         opencv_traincascade -data classifier -vec samples.vec -bg negatives.txt\
@@ -61,10 +49,10 @@ OpenCV, and save the results to `./classifier`:
           -numNeg 600 -w 80 -h 40 -mode ALL -precalcValBufSize 1024\
           -precalcIdxBufSize 1024
 
-9. Wait until the process is finished (which takes a long time — a couple of
+8. Wait until the process is finished (which takes a long time — a couple of
 days probably, depending on the computer you have and how big your images are).
 
-10. Use your finished classifier!
+9. Use your finished classifier!
 
         cd ~/opencv-2.4.9/samples/c
         chmod +x build_all.sh
