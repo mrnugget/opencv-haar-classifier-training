@@ -40,6 +40,9 @@ to the `./samples` folder:
 6. Use `tools/mergevec.py` to merge the samples in `./samples` into one file:
 
         ./tools/mergevec.py -v samples/ -o samples.vec
+        
+   Note: If you get the error `struct.error: unpack requires a string argument of length 12`
+   then go into your **samples** directory and delete all files of length 0.
 
 7. Start training the classifier with `opencv_traincascade`, which comes with
 OpenCV, and save the results to `./classifier`:
