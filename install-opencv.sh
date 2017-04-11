@@ -43,12 +43,7 @@ mv opencv-3.2.0 OpenCV
 cd OpenCV
 mkdir build
 cd build
-cmake -DWITH_QT=ON -DWITH_OPENGL=ON -DFORCE_VTK=ON -DWITH_TBB=ON -DWITH_GDAL=ON -DWITH_XINE=ON -DBUILD_EXAMPLES=ON ..
+cmake -DENABLE_PRECOMPILED_HEADERS=OFF -DWITH_QT=ON -DWITH_OPENGL=ON -DFORCE_VTK=ON -DWITH_TBB=ON -DWITH_GDAL=ON -DWITH_XINE=ON -DBUILD_EXAMPLES=ON ..
 make -j4
 sudo make install
 sudo ldconfig
-
-
-# EXECUTE SOME OPENCV EXAMPLES AND COMPILE A DEMONSTRATION
-
-# To complete this step, please visit 'http://milq.github.io/install-opencv-ubuntu-debian'.
