@@ -11,7 +11,7 @@ OpenCV Haar classifier.
 
 1. Install OpenCV by running the installation script
 	
-        sudo ./install-opencv.sh"
+        sudo ./install-opencv.sh
 
 2. Clone this repository
 
