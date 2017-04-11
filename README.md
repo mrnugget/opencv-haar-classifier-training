@@ -1,6 +1,6 @@
 # Train your own OpenCV Haar classifier
 
-**Important**: This guide assumes you work with OpenCV 2.4.x. 
+**Important**: This guide assumes you work with OpenCV 3.2.0.
 
 This repository aims to provide tools and information on training your own
 OpenCV Haar classifier.
