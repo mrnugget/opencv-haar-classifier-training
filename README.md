@@ -3,15 +3,15 @@
 **Important**: This guide assumes you work with OpenCV 2.4.x. 
 
 This repository aims to provide tools and information on training your own
-OpenCV Haar classifier. 
+OpenCV Haar classifier.
 
 
 
 ## Instructions
 
-1. Install OpenCV & get OpenCV source
+1. Install OpenCV by running the installation script
 	
-        sudo ./install-opencv.sh
+        sudo ./install-opencv.sh__"
 
 2. Clone this repository
 
