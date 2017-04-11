@@ -10,7 +10,7 @@ OpenCV Haar classifier.
 ## Instructions
 
 1. Install OpenCV & get OpenCV source
-	Run "__sudo install ./install-opencv.sh__"
+	Run "__sudo ./install-opencv.sh__"
 
 2. Clone this repository
 
