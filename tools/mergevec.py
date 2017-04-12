@@ -104,7 +104,7 @@ def merge_vec_files(vec_directory, output_vec_file):
 
 	# Check to make sure there are .vec files in the directory
 	if len(files) <= 0:
-		print('Vec files to be mereged could not be found from directory: {0}'.format(vec_directory))
+		print('Vec files to be merged could not be found from directory: {0}'.format(vec_directory))
 		sys.exit(1)
 	# Check to make sure there are more than one .vec files
 	if len(files) == 1:
