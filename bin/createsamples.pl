@@ -14,7 +14,7 @@ use strict;
 # Date  : 06/02/2007
 # Date  : 03/12/2006
 #########################################################################
-my $cmd = './createsamples -bgcolor 0 -bgthresh 0 -maxxangle 1.1 -maxyangle 1.1 maxzangle 0.5 -maxidev 40 -w 20 -h 20';
+my $cmd = 'opencv_createsamples -bgcolor 0 -bgthresh 0 -maxxangle 1.1 -maxyangle 1.1 maxzangle 0.5 -maxidev 40 -w 20 -h 20';
 my $totalnum = 7000;
 my $tmpfile  = 'tmp';
 
