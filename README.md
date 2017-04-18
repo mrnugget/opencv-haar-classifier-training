@@ -1,6 +1,6 @@
 # Train your own OpenCV Haar classifier
 
-**Important**: This guide assumes you work with OpenCV 2.4.x. Since I no longer work with OpenCV, and don't have the time to keep up with changes and fixes, this guide is **unmaintained**. Pull requests will be merged of course, and if someone else wants commit access, feel free to ask!
+**Important**: This guide assumes you work with OpenCV 2.4.x. 
 
 This repository aims to provide tools and information on training your own
 OpenCV Haar classifier.  Use it in conjunction with this blog post: [Train your own OpenCV Haar
@@ -12,10 +12,12 @@ classifier](http://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classif
 
 1. Install OpenCV & get OpenCV source
 
-        brew tap homebrew/science
-        brew install --with-tbb opencv
         wget http://downloads.sourceforge.net/project/opencvlibrary/opencv-unix/2.4.9/opencv-2.4.9.zip
-        unzip opencv-2.4.9.zip
+        unzip opencv-2.4.9.zip -d "`pwd`"
+        cd opencv-2.4.9
+        cmake -DENABLE_PRECOMPILED_HEADERS=OFF ../opencv-2.4.9
+        make
+        make install
 
 2. Clone this repository
 
@@ -23,6 +25,7 @@ classifier](http://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classif
 
 3. Put your positive images in the `./positive_images` folder and create a list
 of them:
+        cd opencv-haar-classifier-training/
 
         find ./positive_images -iname "*.jpg" > positives.txt
 
