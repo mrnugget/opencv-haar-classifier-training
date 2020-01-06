@@ -22,7 +22,7 @@ classifier](http://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classif
         git clone https://github.com/mrnugget/opencv-haar-classifier-training
 
 3. Put your positive images in the `./positive_images` folder and create a list
-of them:
+of them: (if windows, use gitbash for step 3 and 4)
 
         find ./positive_images -iname "*.jpg" > positives.txt
 
@@ -31,7 +31,7 @@ of them:
         find ./negative_images -iname "*.jpg" > negatives.txt
 
 5. Create positive samples with the `bin/createsamples.pl` script and save them
-to the `./samples` folder:
+to the `./samples` folder: (if windows use strawberry perl portable http://strawberryperl.com/releases.html)
 
         perl bin/createsamples.pl positives.txt negatives.txt samples 1500\
           "opencv_createsamples -bgcolor 0 -bgthresh 0 -maxxangle 1.1\
